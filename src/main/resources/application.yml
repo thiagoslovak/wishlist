@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: wishlist
+  data:
+    mongodb:
+      authentication-database: admin
+      username: root
+      password: example
+      database: wishlist
+      port: 27017
+      host: localhost
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:9990/realms/wishlist
+
+server:
+  port: 8080
+
+logging:
+  level:
+    org.springframework.data.mongodb.core.MongoTemplate: DEBUG
