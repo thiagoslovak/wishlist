@@ -22,7 +22,7 @@
     1. Import o [realm](https://github.com/thiagoslovak/wishlist/tree/master/keycloak) no Keycloak indo em:
         - Dado que esteje no link: http://localhost:9990/, então vá em "Administration Console", então coloqueo o usuario e senha que é "admin", então para falicitar vá até o path: http://localhost:9990/admin/master/console/#/create/realm para adicionar o realm, então clique em "Select file" e então vá no projeto no path wishlist\keycloak que o realm estará lá, então clique em "Create".
         - Com o realm criado, acesse o menu esquerdo em "Clients", então procure na lista por "wishlist", então acesse no meu "credentials", então cliquem em "Regenerate Secret", então copie essa Secred e vá no Postman na pasta token, e gere o token de acordo com o print:
-            - ![DiagrmaProjeto](https://github.com/thiagoslovak/Secretaria-Bridge/blob/master/2021-11-26_09h57_37.png)
+            - ![print1]([https://github.com/thiagoslovak/Secretaria-Bridge/blob/master/2021-11-26_09h57_37.png](https://github.com/thiagoslovak/wishlist/blob/master/prints/Screenshot_1.png)
         - Após clicar em "Get new access token", copie o token conforme o print:
             - [colocar o print]
 5. Com o token gerado, para fazer as requisições tem que colocar o token em no meu "Authorization", então coloque o "Type" e então cole o Token, conforme o print:
