@@ -42,8 +42,10 @@ public class ProductService {
     }
 
     public Product updatingProduct(Product product) {
+        verifyIfIdIsValid(product.getId());
+
         try {
-            product = productRepository.save(checkingIdIsNotNull(product));
+            product = productRepository.save(product);
         } catch (Exception ex) {
             logger.error(ex.getMessage());
         }
@@ -64,14 +66,6 @@ public class ProductService {
         }
 
         return product.getName().equals(productForChecking.getName());
-    }
-
-    public Product checkingIdIsNotNull(Product product) {
-        if(product.getId() != null) {
-            return product;
-        }
-
-        return productRepository.findByName(product.getName());
     }
 
     public void verifyIfIdIsValid(String id) {

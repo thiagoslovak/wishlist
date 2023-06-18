@@ -75,7 +75,7 @@ public class ClientDto {
     public static class RepresentationBuilder {
 
         public ClientDto toRepresentation(final Client client) {
-            return new ClientDto.ClientDtoBuilder()
+            return new ClientDtoBuilder()
                     .id(client.getId())
                     .name(client.getName())
                     .cpf(client.getCpf())

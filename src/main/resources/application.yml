@@ -9,6 +9,7 @@ spring:
       database: wishlist
       port: 27017
       host: localhost
+      auto-index-creation: true
   security:
     oauth2:
       resourceserver:

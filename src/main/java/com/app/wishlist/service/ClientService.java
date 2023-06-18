@@ -42,8 +42,10 @@ public class ClientService {
     }
 
     public Client updatingClient(Client client) {
+        verifyIfIdIsValid(client.getId());
+
         try {
-            client = clientRepository.save(checkingIdIsNotNull(client));
+            client = clientRepository.save(client);
         } catch (Exception ex) {
             logger.error(ex.getMessage());
         }
@@ -64,14 +66,6 @@ public class ClientService {
         }
 
         return client.getCpf().equals(clientForChecking.getCpf());
-    }
-
-    public Client checkingIdIsNotNull(Client client) {
-        if(client.getId() != null) {
-            return client;
-        }
-
-        return clientRepository.findByCpf(client.getCpf());
     }
 
     public void verifyIfIdIsValid(String id) {

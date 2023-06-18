@@ -18,7 +18,7 @@ public class ProductDto {
     @Size(max = 100)
     private final String details;
 
-    public ProductDto(String id, String name, String color, BigDecimal value, String details) {
+    private ProductDto(String id, String name, String color, BigDecimal value, String details) {
         this.id = id;
         this.name = name;
         this.color = color;
