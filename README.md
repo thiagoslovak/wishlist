@@ -24,9 +24,9 @@
         - Com o realm criado, acesse o menu esquerdo em "Clients", então procure na lista por "wishlist", então acesse no meu "credentials", então cliquem em "Regenerate Secret", então copie essa Secred e vá no Postman na pasta token, e gere o token de acordo com o print:
             - ![print1](https://github.com/thiagoslovak/wishlist/blob/master/prints/Screenshot_1.png)
         - Após clicar em "Get new access token", copie o token conforme o print:
-            - [colocar o print]
+            - ![print2](https://github.com/thiagoslovak/wishlist/blob/master/prints/Screenshot_2.png)
 5. Com o token gerado, para fazer as requisições tem que colocar o token em no meu "Authorization", então coloque o "Type" e então cole o Token, conforme o print:
-    - [colocar o print]
+    - ![print3](https://github.com/thiagoslovak/wishlist/blob/master/prints/Screenshot_3.png)
 6. Depois de tanto trabalho kk, não desista. Para se utilizar a aplicação via Postman o ideal seria:
     - Criar os Produtos, depois criar os clientes, depois criar a Wishlist com o Produtos e o Clientes.
 7. Seguindo as instruções do teste seria:
@@ -35,11 +35,11 @@
             - Foi criado um end point onde é possivel criar Wishlist sem o cliente e sem os produtos.
             - Criar a Wishlist com o cliente e sem os produtos.
             - E também criar a Wishlist com o cliente e com os produtos.
-            - [colocar o print do post]
+            - ![print4](https://github.com/thiagoslovak/wishlist/blob/master/prints/Screenshot_4.png)
 
         - Para adicionar um produto na Wishlist do cliente:
             - Dado que eu tenha uma Wishlist, ir no wishlist/PUT - updating e passar a Wishlist, com os produtos e com o cliente.
-            - [Colocar o print do put]
+            - ![print](https://github.com/thiagoslovak/wishlist/blob/master/prints/Screenshot_5.png)
 
     - Remover um produto da Wishlist do cliente:
         - Para remover um produto vá em wishlist/PUT - updating e passar a Wishlist, com o produtos que deseja que fique e com o cliente.
@@ -47,5 +47,5 @@
         - Temos os wishlist/findingById e wishlist/findingAllWishlist
     - Consultar se um determinado produto está na Wishlist do cliente:
         - Para isso vá em wishlist/findByProductsAndClient e passe o id do cliente e do produto no parms que ele irá buscar uma Wishlist que tem o produto e o clinte informado, conforme o print:
-        - [Colocar o ultimo print]
+        - ![print6](https://github.com/thiagoslovak/wishlist/blob/master/prints/Screenshot_6.png)
 
