@@ -1,0 +1,590 @@
+{
+	"info": {
+		"_postman_id": "488a73f7-7aeb-4130-a098-6e4af149785b",
+		"name": "Wishlist",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18447127"
+	},
+	"item": [
+		{
+			"name": "token",
+			"item": [
+				{
+					"name": "GET - Token Keycloak",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientSecret",
+									"value": "YA4GVl9feuuByDfoUJTSB8KBNd0GQ0ua",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "wishlist",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "http://localhost:9990/realms/wishlist/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "client",
+			"item": [
+				{
+					"name": "GET - findingAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ0MVhmOVdJUlJrWGU0M19MVGVjV29XRjlIY2hKdjNLWGFtajBiemJGYl9BIn0.eyJleHAiOjE2ODcxMjUxNTEsImlhdCI6MTY4NzA4OTE1MSwianRpIjoiZjI0YzcxNDktZGE5OS00OWMxLTljMjAtNDVjMmRjNTg1Y2ZkIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5OTkwL3JlYWxtcy93aXNobGlzdCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiIxNTRjMzEzOS1jMTMxLTQ3ODctOGM3Yy0xMWNhNzEwMTcxYjAiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ3aXNobGlzdCIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXdpc2hsaXN0IiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJ3aXNobGlzdCI6eyJyb2xlcyI6WyJ1bWFfcHJvdGVjdGlvbiJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJjbGllbnRIb3N0IjoiMTcyLjE3LjAuMSIsImNsaWVudElkIjoid2lzaGxpc3QiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtd2lzaGxpc3QiLCJjbGllbnRBZGRyZXNzIjoiMTcyLjE3LjAuMSJ9.gb4salNWi2XUfM6Xifza6kTa9QpNZtHEQxzCRM66zMvxOAH9rYoTWnwMXeO8eec7TxwiiEiKsmKhTNprhW9Z5lXuqTNYS03WBhmHcXD2nKWbHOZe93yzn3wHHH2pxW42mHgMJLFDy5AhGSCdb9SwJN5IZeelu_6oUgYKOOLv3W1SI4teOVr7bRoSnrQcWQSNDEibuMEUGu7omSVXcdpqrZ_l8Dye1u59kIVjtdRlgrWbRj-r9YzUoFZovXJDzrYVsaI0g8afriJ4KhU7jS1in__kOHbUnyq9zxAaXL2hU0gpMmUNYcbzkQGnNUcguSW8BQ9O2HIiCuKOqexfT7V6zA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/clients",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - findingById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ0MVhmOVdJUlJrWGU0M19MVGVjV29XRjlIY2hKdjNLWGFtajBiemJGYl9BIn0.eyJleHAiOjE2ODcxMjUxNTEsImlhdCI6MTY4NzA4OTE1MSwianRpIjoiZjI0YzcxNDktZGE5OS00OWMxLTljMjAtNDVjMmRjNTg1Y2ZkIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5OTkwL3JlYWxtcy93aXNobGlzdCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiIxNTRjMzEzOS1jMTMxLTQ3ODctOGM3Yy0xMWNhNzEwMTcxYjAiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ3aXNobGlzdCIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXdpc2hsaXN0IiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJ3aXNobGlzdCI6eyJyb2xlcyI6WyJ1bWFfcHJvdGVjdGlvbiJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJjbGllbnRIb3N0IjoiMTcyLjE3LjAuMSIsImNsaWVudElkIjoid2lzaGxpc3QiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtd2lzaGxpc3QiLCJjbGllbnRBZGRyZXNzIjoiMTcyLjE3LjAuMSJ9.gb4salNWi2XUfM6Xifza6kTa9QpNZtHEQxzCRM66zMvxOAH9rYoTWnwMXeO8eec7TxwiiEiKsmKhTNprhW9Z5lXuqTNYS03WBhmHcXD2nKWbHOZe93yzn3wHHH2pxW42mHgMJLFDy5AhGSCdb9SwJN5IZeelu_6oUgYKOOLv3W1SI4teOVr7bRoSnrQcWQSNDEibuMEUGu7omSVXcdpqrZ_l8Dye1u59kIVjtdRlgrWbRj-r9YzUoFZovXJDzrYVsaI0g8afriJ4KhU7jS1in__kOHbUnyq9zxAaXL2hU0gpMmUNYcbzkQGnNUcguSW8BQ9O2HIiCuKOqexfT7V6zA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/clients/648e2c27edbc6726c2d36922",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clients",
+								"648e2c27edbc6726c2d36922"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST - creating",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ0MVhmOVdJUlJrWGU0M19MVGVjV29XRjlIY2hKdjNLWGFtajBiemJGYl9BIn0.eyJleHAiOjE2ODcxMjUxNTEsImlhdCI6MTY4NzA4OTE1MSwianRpIjoiZjI0YzcxNDktZGE5OS00OWMxLTljMjAtNDVjMmRjNTg1Y2ZkIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5OTkwL3JlYWxtcy93aXNobGlzdCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiIxNTRjMzEzOS1jMTMxLTQ3ODctOGM3Yy0xMWNhNzEwMTcxYjAiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ3aXNobGlzdCIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXdpc2hsaXN0IiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJ3aXNobGlzdCI6eyJyb2xlcyI6WyJ1bWFfcHJvdGVjdGlvbiJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJjbGllbnRIb3N0IjoiMTcyLjE3LjAuMSIsImNsaWVudElkIjoid2lzaGxpc3QiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtd2lzaGxpc3QiLCJjbGllbnRBZGRyZXNzIjoiMTcyLjE3LjAuMSJ9.gb4salNWi2XUfM6Xifza6kTa9QpNZtHEQxzCRM66zMvxOAH9rYoTWnwMXeO8eec7TxwiiEiKsmKhTNprhW9Z5lXuqTNYS03WBhmHcXD2nKWbHOZe93yzn3wHHH2pxW42mHgMJLFDy5AhGSCdb9SwJN5IZeelu_6oUgYKOOLv3W1SI4teOVr7bRoSnrQcWQSNDEibuMEUGu7omSVXcdpqrZ_l8Dye1u59kIVjtdRlgrWbRj-r9YzUoFZovXJDzrYVsaI0g8afriJ4KhU7jS1in__kOHbUnyq9zxAaXL2hU0gpMmUNYcbzkQGnNUcguSW8BQ9O2HIiCuKOqexfT7V6zA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Joaozinho da Silva\",\r\n    \"cpf\": \"927.907.020-99\",\r\n    \"address\": \"Rua da Wishlist\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/clients",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT - updating",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ0MVhmOVdJUlJrWGU0M19MVGVjV29XRjlIY2hKdjNLWGFtajBiemJGYl9BIn0.eyJleHAiOjE2ODcwNTQ5NDEsImlhdCI6MTY4NzAxODk0MSwianRpIjoiYmNkNGU0YzEtZTE3OC00NGYxLTgxOGMtYjIyNWJjYzJmYjY0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5OTkwL3JlYWxtcy93aXNobGlzdCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiIxNTRjMzEzOS1jMTMxLTQ3ODctOGM3Yy0xMWNhNzEwMTcxYjAiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ3aXNobGlzdCIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXdpc2hsaXN0IiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJ3aXNobGlzdCI6eyJyb2xlcyI6WyJ1bWFfcHJvdGVjdGlvbiJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJjbGllbnRIb3N0IjoiMTcyLjE3LjAuMSIsImNsaWVudElkIjoid2lzaGxpc3QiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtd2lzaGxpc3QiLCJjbGllbnRBZGRyZXNzIjoiMTcyLjE3LjAuMSJ9.QyfxdIJmhL9SWgUt09DZy84wWBhFfW0Eeg1SdeCWd_uJ-v3Waf_m-8UaEmM5n6bei6K2dvC1c_fVx0nwzC3HK-zw69-LZwTF632xbvw1Lz6EqaUfSw37Q3Gn0ATf-yAiWeWHBYYJAHNvCWBS2le7Xf2_-Gb-qLT9X4AjKJB0ACbcq4xEgesbZztYe47OuW4oCZi6J-HVrv0VMgePExlN5fD4GRo0Jut4TpoWY0n5ACEa7JCE5YIK2byT3z_77Gdck5aNXaFgo_XgkeVlVbIdao6UtR5ZdUYjnLTfalkHamy7yX7SF2es966tUvXwPuJ8pzD1ldlPHn0MMEzHjHJuxA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"648dddd97fef3b1fee1c23bf\",\r\n    \"name\": \"Joaozinho da Silva Souza\",\r\n    \"cpf\": \"927.907.030-71\",\r\n    \"address\": \"Rua da Wishlist\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/clients",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE - deleting",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ0MVhmOVdJUlJrWGU0M19MVGVjV29XRjlIY2hKdjNLWGFtajBiemJGYl9BIn0.eyJleHAiOjE2ODcxMjUxNTEsImlhdCI6MTY4NzA4OTE1MSwianRpIjoiZjI0YzcxNDktZGE5OS00OWMxLTljMjAtNDVjMmRjNTg1Y2ZkIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5OTkwL3JlYWxtcy93aXNobGlzdCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiIxNTRjMzEzOS1jMTMxLTQ3ODctOGM3Yy0xMWNhNzEwMTcxYjAiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ3aXNobGlzdCIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXdpc2hsaXN0IiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJ3aXNobGlzdCI6eyJyb2xlcyI6WyJ1bWFfcHJvdGVjdGlvbiJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJjbGllbnRIb3N0IjoiMTcyLjE3LjAuMSIsImNsaWVudElkIjoid2lzaGxpc3QiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtd2lzaGxpc3QiLCJjbGllbnRBZGRyZXNzIjoiMTcyLjE3LjAuMSJ9.gb4salNWi2XUfM6Xifza6kTa9QpNZtHEQxzCRM66zMvxOAH9rYoTWnwMXeO8eec7TxwiiEiKsmKhTNprhW9Z5lXuqTNYS03WBhmHcXD2nKWbHOZe93yzn3wHHH2pxW42mHgMJLFDy5AhGSCdb9SwJN5IZeelu_6oUgYKOOLv3W1SI4teOVr7bRoSnrQcWQSNDEibuMEUGu7omSVXcdpqrZ_l8Dye1u59kIVjtdRlgrWbRj-r9YzUoFZovXJDzrYVsaI0g8afriJ4KhU7jS1in__kOHbUnyq9zxAaXL2hU0gpMmUNYcbzkQGnNUcguSW8BQ9O2HIiCuKOqexfT7V6zA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/clients/648e2c27edbc6726c2d36922",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clients",
+								"648e2c27edbc6726c2d36922"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "GET - findingAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ0MVhmOVdJUlJrWGU0M19MVGVjV29XRjlIY2hKdjNLWGFtajBiemJGYl9BIn0.eyJleHAiOjE2ODcxMjUxNTEsImlhdCI6MTY4NzA4OTE1MSwianRpIjoiZjI0YzcxNDktZGE5OS00OWMxLTljMjAtNDVjMmRjNTg1Y2ZkIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5OTkwL3JlYWxtcy93aXNobGlzdCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiIxNTRjMzEzOS1jMTMxLTQ3ODctOGM3Yy0xMWNhNzEwMTcxYjAiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ3aXNobGlzdCIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXdpc2hsaXN0IiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJ3aXNobGlzdCI6eyJyb2xlcyI6WyJ1bWFfcHJvdGVjdGlvbiJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJjbGllbnRIb3N0IjoiMTcyLjE3LjAuMSIsImNsaWVudElkIjoid2lzaGxpc3QiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtd2lzaGxpc3QiLCJjbGllbnRBZGRyZXNzIjoiMTcyLjE3LjAuMSJ9.gb4salNWi2XUfM6Xifza6kTa9QpNZtHEQxzCRM66zMvxOAH9rYoTWnwMXeO8eec7TxwiiEiKsmKhTNprhW9Z5lXuqTNYS03WBhmHcXD2nKWbHOZe93yzn3wHHH2pxW42mHgMJLFDy5AhGSCdb9SwJN5IZeelu_6oUgYKOOLv3W1SI4teOVr7bRoSnrQcWQSNDEibuMEUGu7omSVXcdpqrZ_l8Dye1u59kIVjtdRlgrWbRj-r9YzUoFZovXJDzrYVsaI0g8afriJ4KhU7jS1in__kOHbUnyq9zxAaXL2hU0gpMmUNYcbzkQGnNUcguSW8BQ9O2HIiCuKOqexfT7V6zA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/products",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST - creating",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ0MVhmOVdJUlJrWGU0M19MVGVjV29XRjlIY2hKdjNLWGFtajBiemJGYl9BIn0.eyJleHAiOjE2ODcxMjUxNTEsImlhdCI6MTY4NzA4OTE1MSwianRpIjoiZjI0YzcxNDktZGE5OS00OWMxLTljMjAtNDVjMmRjNTg1Y2ZkIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5OTkwL3JlYWxtcy93aXNobGlzdCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiIxNTRjMzEzOS1jMTMxLTQ3ODctOGM3Yy0xMWNhNzEwMTcxYjAiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ3aXNobGlzdCIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXdpc2hsaXN0IiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJ3aXNobGlzdCI6eyJyb2xlcyI6WyJ1bWFfcHJvdGVjdGlvbiJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJjbGllbnRIb3N0IjoiMTcyLjE3LjAuMSIsImNsaWVudElkIjoid2lzaGxpc3QiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtd2lzaGxpc3QiLCJjbGllbnRBZGRyZXNzIjoiMTcyLjE3LjAuMSJ9.gb4salNWi2XUfM6Xifza6kTa9QpNZtHEQxzCRM66zMvxOAH9rYoTWnwMXeO8eec7TxwiiEiKsmKhTNprhW9Z5lXuqTNYS03WBhmHcXD2nKWbHOZe93yzn3wHHH2pxW42mHgMJLFDy5AhGSCdb9SwJN5IZeelu_6oUgYKOOLv3W1SI4teOVr7bRoSnrQcWQSNDEibuMEUGu7omSVXcdpqrZ_l8Dye1u59kIVjtdRlgrWbRj-r9YzUoFZovXJDzrYVsaI0g8afriJ4KhU7jS1in__kOHbUnyq9zxAaXL2hU0gpMmUNYcbzkQGnNUcguSW8BQ9O2HIiCuKOqexfT7V6zA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Smart TV 43 UHD 4K AOC\",\r\n    \"color\": \"Preto\",\r\n    \"value\": 1599,\r\n    \"details\": \"Prepare-se para experienciar um novo nível de imersão televisiva com a TV AOC UHD AU7700.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/products",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT - updating",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ0MVhmOVdJUlJrWGU0M19MVGVjV29XRjlIY2hKdjNLWGFtajBiemJGYl9BIn0.eyJleHAiOjE2ODcwNTQ5NDEsImlhdCI6MTY4NzAxODk0MSwianRpIjoiYmNkNGU0YzEtZTE3OC00NGYxLTgxOGMtYjIyNWJjYzJmYjY0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5OTkwL3JlYWxtcy93aXNobGlzdCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiIxNTRjMzEzOS1jMTMxLTQ3ODctOGM3Yy0xMWNhNzEwMTcxYjAiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ3aXNobGlzdCIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXdpc2hsaXN0IiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJ3aXNobGlzdCI6eyJyb2xlcyI6WyJ1bWFfcHJvdGVjdGlvbiJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJjbGllbnRIb3N0IjoiMTcyLjE3LjAuMSIsImNsaWVudElkIjoid2lzaGxpc3QiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtd2lzaGxpc3QiLCJjbGllbnRBZGRyZXNzIjoiMTcyLjE3LjAuMSJ9.QyfxdIJmhL9SWgUt09DZy84wWBhFfW0Eeg1SdeCWd_uJ-v3Waf_m-8UaEmM5n6bei6K2dvC1c_fVx0nwzC3HK-zw69-LZwTF632xbvw1Lz6EqaUfSw37Q3Gn0ATf-yAiWeWHBYYJAHNvCWBS2le7Xf2_-Gb-qLT9X4AjKJB0ACbcq4xEgesbZztYe47OuW4oCZi6J-HVrv0VMgePExlN5fD4GRo0Jut4TpoWY0n5ACEa7JCE5YIK2byT3z_77Gdck5aNXaFgo_XgkeVlVbIdao6UtR5ZdUYjnLTfalkHamy7yX7SF2es966tUvXwPuJ8pzD1ldlPHn0MMEzHjHJuxA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"id\": \"648df14741be776789e5dd3c\",\r\n        \"name\": \"Smart TV 49 UHD 4K LG\",\r\n        \"color\": \"Preto\",\r\n        \"value\": 1999,\r\n        \"details\": \"Prepare-se para experienciar um novo nível de imersão televisiva com a LG Samsung UHD AU7700.\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/products",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - findingById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ0MVhmOVdJUlJrWGU0M19MVGVjV29XRjlIY2hKdjNLWGFtajBiemJGYl9BIn0.eyJleHAiOjE2ODcwNTQ5NDEsImlhdCI6MTY4NzAxODk0MSwianRpIjoiYmNkNGU0YzEtZTE3OC00NGYxLTgxOGMtYjIyNWJjYzJmYjY0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5OTkwL3JlYWxtcy93aXNobGlzdCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiIxNTRjMzEzOS1jMTMxLTQ3ODctOGM3Yy0xMWNhNzEwMTcxYjAiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ3aXNobGlzdCIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXdpc2hsaXN0IiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJ3aXNobGlzdCI6eyJyb2xlcyI6WyJ1bWFfcHJvdGVjdGlvbiJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJjbGllbnRIb3N0IjoiMTcyLjE3LjAuMSIsImNsaWVudElkIjoid2lzaGxpc3QiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtd2lzaGxpc3QiLCJjbGllbnRBZGRyZXNzIjoiMTcyLjE3LjAuMSJ9.QyfxdIJmhL9SWgUt09DZy84wWBhFfW0Eeg1SdeCWd_uJ-v3Waf_m-8UaEmM5n6bei6K2dvC1c_fVx0nwzC3HK-zw69-LZwTF632xbvw1Lz6EqaUfSw37Q3Gn0ATf-yAiWeWHBYYJAHNvCWBS2le7Xf2_-Gb-qLT9X4AjKJB0ACbcq4xEgesbZztYe47OuW4oCZi6J-HVrv0VMgePExlN5fD4GRo0Jut4TpoWY0n5ACEa7JCE5YIK2byT3z_77Gdck5aNXaFgo_XgkeVlVbIdao6UtR5ZdUYjnLTfalkHamy7yX7SF2es966tUvXwPuJ8pzD1ldlPHn0MMEzHjHJuxA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/products/648ddff7b16530678303a29e",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"648ddff7b16530678303a29e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE - deleting",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ0MVhmOVdJUlJrWGU0M19MVGVjV29XRjlIY2hKdjNLWGFtajBiemJGYl9BIn0.eyJleHAiOjE2ODcwNTQ5NDEsImlhdCI6MTY4NzAxODk0MSwianRpIjoiYmNkNGU0YzEtZTE3OC00NGYxLTgxOGMtYjIyNWJjYzJmYjY0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5OTkwL3JlYWxtcy93aXNobGlzdCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiIxNTRjMzEzOS1jMTMxLTQ3ODctOGM3Yy0xMWNhNzEwMTcxYjAiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ3aXNobGlzdCIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXdpc2hsaXN0IiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJ3aXNobGlzdCI6eyJyb2xlcyI6WyJ1bWFfcHJvdGVjdGlvbiJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJjbGllbnRIb3N0IjoiMTcyLjE3LjAuMSIsImNsaWVudElkIjoid2lzaGxpc3QiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtd2lzaGxpc3QiLCJjbGllbnRBZGRyZXNzIjoiMTcyLjE3LjAuMSJ9.QyfxdIJmhL9SWgUt09DZy84wWBhFfW0Eeg1SdeCWd_uJ-v3Waf_m-8UaEmM5n6bei6K2dvC1c_fVx0nwzC3HK-zw69-LZwTF632xbvw1Lz6EqaUfSw37Q3Gn0ATf-yAiWeWHBYYJAHNvCWBS2le7Xf2_-Gb-qLT9X4AjKJB0ACbcq4xEgesbZztYe47OuW4oCZi6J-HVrv0VMgePExlN5fD4GRo0Jut4TpoWY0n5ACEa7JCE5YIK2byT3z_77Gdck5aNXaFgo_XgkeVlVbIdao6UtR5ZdUYjnLTfalkHamy7yX7SF2es966tUvXwPuJ8pzD1ldlPHn0MMEzHjHJuxA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/products/648e21e68653e851a6bb38a1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"648e21e68653e851a6bb38a1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "wishlist",
+			"item": [
+				{
+					"name": "POST -  creatingWishlist",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ0MVhmOVdJUlJrWGU0M19MVGVjV29XRjlIY2hKdjNLWGFtajBiemJGYl9BIn0.eyJleHAiOjE2ODcxMjUxNTEsImlhdCI6MTY4NzA4OTE1MSwianRpIjoiZjI0YzcxNDktZGE5OS00OWMxLTljMjAtNDVjMmRjNTg1Y2ZkIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5OTkwL3JlYWxtcy93aXNobGlzdCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiIxNTRjMzEzOS1jMTMxLTQ3ODctOGM3Yy0xMWNhNzEwMTcxYjAiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ3aXNobGlzdCIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXdpc2hsaXN0IiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJ3aXNobGlzdCI6eyJyb2xlcyI6WyJ1bWFfcHJvdGVjdGlvbiJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJjbGllbnRIb3N0IjoiMTcyLjE3LjAuMSIsImNsaWVudElkIjoid2lzaGxpc3QiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtd2lzaGxpc3QiLCJjbGllbnRBZGRyZXNzIjoiMTcyLjE3LjAuMSJ9.gb4salNWi2XUfM6Xifza6kTa9QpNZtHEQxzCRM66zMvxOAH9rYoTWnwMXeO8eec7TxwiiEiKsmKhTNprhW9Z5lXuqTNYS03WBhmHcXD2nKWbHOZe93yzn3wHHH2pxW42mHgMJLFDy5AhGSCdb9SwJN5IZeelu_6oUgYKOOLv3W1SI4teOVr7bRoSnrQcWQSNDEibuMEUGu7omSVXcdpqrZ_l8Dye1u59kIVjtdRlgrWbRj-r9YzUoFZovXJDzrYVsaI0g8afriJ4KhU7jS1in__kOHbUnyq9zxAaXL2hU0gpMmUNYcbzkQGnNUcguSW8BQ9O2HIiCuKOqexfT7V6zA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Wishlist 1\",\r\n    \"client\": {\r\n        \"id\": \"648f0e08b817311ba39a73d6\",\r\n        \"name\": \"Joaozinho da Silva Souza\",\r\n        \"cpf\": \"927.907.020-81\",\r\n        \"address\": \"Rua da Wishlist\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/wishlists",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"wishlists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - findingAllWishlist",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ0MVhmOVdJUlJrWGU0M19MVGVjV29XRjlIY2hKdjNLWGFtajBiemJGYl9BIn0.eyJleHAiOjE2ODcxMjUxNTEsImlhdCI6MTY4NzA4OTE1MSwianRpIjoiZjI0YzcxNDktZGE5OS00OWMxLTljMjAtNDVjMmRjNTg1Y2ZkIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5OTkwL3JlYWxtcy93aXNobGlzdCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiIxNTRjMzEzOS1jMTMxLTQ3ODctOGM3Yy0xMWNhNzEwMTcxYjAiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ3aXNobGlzdCIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXdpc2hsaXN0IiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJ3aXNobGlzdCI6eyJyb2xlcyI6WyJ1bWFfcHJvdGVjdGlvbiJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJjbGllbnRIb3N0IjoiMTcyLjE3LjAuMSIsImNsaWVudElkIjoid2lzaGxpc3QiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtd2lzaGxpc3QiLCJjbGllbnRBZGRyZXNzIjoiMTcyLjE3LjAuMSJ9.gb4salNWi2XUfM6Xifza6kTa9QpNZtHEQxzCRM66zMvxOAH9rYoTWnwMXeO8eec7TxwiiEiKsmKhTNprhW9Z5lXuqTNYS03WBhmHcXD2nKWbHOZe93yzn3wHHH2pxW42mHgMJLFDy5AhGSCdb9SwJN5IZeelu_6oUgYKOOLv3W1SI4teOVr7bRoSnrQcWQSNDEibuMEUGu7omSVXcdpqrZ_l8Dye1u59kIVjtdRlgrWbRj-r9YzUoFZovXJDzrYVsaI0g8afriJ4KhU7jS1in__kOHbUnyq9zxAaXL2hU0gpMmUNYcbzkQGnNUcguSW8BQ9O2HIiCuKOqexfT7V6zA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/wishlists",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"wishlists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE - deleting",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ0MVhmOVdJUlJrWGU0M19MVGVjV29XRjlIY2hKdjNLWGFtajBiemJGYl9BIn0.eyJleHAiOjE2ODcxMjUxNTEsImlhdCI6MTY4NzA4OTE1MSwianRpIjoiZjI0YzcxNDktZGE5OS00OWMxLTljMjAtNDVjMmRjNTg1Y2ZkIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5OTkwL3JlYWxtcy93aXNobGlzdCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiIxNTRjMzEzOS1jMTMxLTQ3ODctOGM3Yy0xMWNhNzEwMTcxYjAiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ3aXNobGlzdCIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXdpc2hsaXN0IiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJ3aXNobGlzdCI6eyJyb2xlcyI6WyJ1bWFfcHJvdGVjdGlvbiJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJjbGllbnRIb3N0IjoiMTcyLjE3LjAuMSIsImNsaWVudElkIjoid2lzaGxpc3QiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtd2lzaGxpc3QiLCJjbGllbnRBZGRyZXNzIjoiMTcyLjE3LjAuMSJ9.gb4salNWi2XUfM6Xifza6kTa9QpNZtHEQxzCRM66zMvxOAH9rYoTWnwMXeO8eec7TxwiiEiKsmKhTNprhW9Z5lXuqTNYS03WBhmHcXD2nKWbHOZe93yzn3wHHH2pxW42mHgMJLFDy5AhGSCdb9SwJN5IZeelu_6oUgYKOOLv3W1SI4teOVr7bRoSnrQcWQSNDEibuMEUGu7omSVXcdpqrZ_l8Dye1u59kIVjtdRlgrWbRj-r9YzUoFZovXJDzrYVsaI0g8afriJ4KhU7jS1in__kOHbUnyq9zxAaXL2hU0gpMmUNYcbzkQGnNUcguSW8BQ9O2HIiCuKOqexfT7V6zA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/wishlists/648f120647ebdf70980c0866",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"wishlists",
+								"648f120647ebdf70980c0866"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - findingById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ0MVhmOVdJUlJrWGU0M19MVGVjV29XRjlIY2hKdjNLWGFtajBiemJGYl9BIn0.eyJleHAiOjE2ODcxMjUxNTEsImlhdCI6MTY4NzA4OTE1MSwianRpIjoiZjI0YzcxNDktZGE5OS00OWMxLTljMjAtNDVjMmRjNTg1Y2ZkIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5OTkwL3JlYWxtcy93aXNobGlzdCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiIxNTRjMzEzOS1jMTMxLTQ3ODctOGM3Yy0xMWNhNzEwMTcxYjAiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ3aXNobGlzdCIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXdpc2hsaXN0IiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJ3aXNobGlzdCI6eyJyb2xlcyI6WyJ1bWFfcHJvdGVjdGlvbiJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJjbGllbnRIb3N0IjoiMTcyLjE3LjAuMSIsImNsaWVudElkIjoid2lzaGxpc3QiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtd2lzaGxpc3QiLCJjbGllbnRBZGRyZXNzIjoiMTcyLjE3LjAuMSJ9.gb4salNWi2XUfM6Xifza6kTa9QpNZtHEQxzCRM66zMvxOAH9rYoTWnwMXeO8eec7TxwiiEiKsmKhTNprhW9Z5lXuqTNYS03WBhmHcXD2nKWbHOZe93yzn3wHHH2pxW42mHgMJLFDy5AhGSCdb9SwJN5IZeelu_6oUgYKOOLv3W1SI4teOVr7bRoSnrQcWQSNDEibuMEUGu7omSVXcdpqrZ_l8Dye1u59kIVjtdRlgrWbRj-r9YzUoFZovXJDzrYVsaI0g8afriJ4KhU7jS1in__kOHbUnyq9zxAaXL2hU0gpMmUNYcbzkQGnNUcguSW8BQ9O2HIiCuKOqexfT7V6zA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/wishlists/648f163be18b3c1f8f711045",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"wishlists",
+								"648f163be18b3c1f8f711045"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT - updating",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ0MVhmOVdJUlJrWGU0M19MVGVjV29XRjlIY2hKdjNLWGFtajBiemJGYl9BIn0.eyJleHAiOjE2ODcxMjUxNTEsImlhdCI6MTY4NzA4OTE1MSwianRpIjoiZjI0YzcxNDktZGE5OS00OWMxLTljMjAtNDVjMmRjNTg1Y2ZkIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5OTkwL3JlYWxtcy93aXNobGlzdCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiIxNTRjMzEzOS1jMTMxLTQ3ODctOGM3Yy0xMWNhNzEwMTcxYjAiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ3aXNobGlzdCIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXdpc2hsaXN0IiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJ3aXNobGlzdCI6eyJyb2xlcyI6WyJ1bWFfcHJvdGVjdGlvbiJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJjbGllbnRIb3N0IjoiMTcyLjE3LjAuMSIsImNsaWVudElkIjoid2lzaGxpc3QiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtd2lzaGxpc3QiLCJjbGllbnRBZGRyZXNzIjoiMTcyLjE3LjAuMSJ9.gb4salNWi2XUfM6Xifza6kTa9QpNZtHEQxzCRM66zMvxOAH9rYoTWnwMXeO8eec7TxwiiEiKsmKhTNprhW9Z5lXuqTNYS03WBhmHcXD2nKWbHOZe93yzn3wHHH2pxW42mHgMJLFDy5AhGSCdb9SwJN5IZeelu_6oUgYKOOLv3W1SI4teOVr7bRoSnrQcWQSNDEibuMEUGu7omSVXcdpqrZ_l8Dye1u59kIVjtdRlgrWbRj-r9YzUoFZovXJDzrYVsaI0g8afriJ4KhU7jS1in__kOHbUnyq9zxAaXL2hU0gpMmUNYcbzkQGnNUcguSW8BQ9O2HIiCuKOqexfT7V6zA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"id\": \"648f163be18b3c1f8f711045\",\r\n        \"name\": \"Wishlist 1\",\r\n        \"products\": [\r\n            {\r\n                \"id\": \"648f0e3db817311ba39a73d8\",\r\n                \"name\": \"Smart TV 43 UHD 4K LG\",\r\n                \"color\": \"Preto\",\r\n                \"value\": 1499,\r\n                \"details\": \"Prepare-se para experienciar um novo nível de imersão televisiva com a TV LG UHD AU7700.\"\r\n            },\r\n                      {\r\n                \"id\": \"648f0e3db817311ba39a73d8\",\r\n                \"name\": \"Smart TV 43 UHD 4K LG\",\r\n                \"color\": \"Preto\",\r\n                \"value\": 1499,\r\n                \"details\": \"Prepare-se para experienciar um novo nível de imersão televisiva com a TV LG UHD AU7700.\"\r\n            },\r\n                      {\r\n                \"id\": \"648f0e3db817311ba39a73d8\",\r\n                \"name\": \"Smart TV 43 UHD 4K LG\",\r\n                \"color\": \"Preto\",\r\n                \"value\": 1499,\r\n                \"details\": \"Prepare-se para experienciar um novo nível de imersão televisiva com a TV LG UHD AU7700.\"\r\n            },\r\n                      {\r\n                \"id\": \"648f0e3db817311ba39a73d8\",\r\n                \"name\": \"Smart TV 43 UHD 4K LG\",\r\n                \"color\": \"Preto\",\r\n                \"value\": 1499,\r\n                \"details\": \"Prepare-se para experienciar um novo nível de imersão televisiva com a TV LG UHD AU7700.\"\r\n            },\r\n                      {\r\n                \"id\": \"648f0e3db817311ba39a73d8\",\r\n                \"name\": \"Smart TV 43 UHD 4K LG\",\r\n                \"color\": \"Preto\",\r\n                \"value\": 1499,\r\n                \"details\": \"Prepare-se para experienciar um novo nível de imersão televisiva com a TV LG UHD AU7700.\"\r\n            },\r\n                      {\r\n                \"id\": \"648f0e3db817311ba39a73d8\",\r\n                \"name\": \"Smart TV 43 UHD 4K LG\",\r\n                \"color\": \"Preto\",\r\n                \"value\": 1499,\r\n                \"details\": \"Prepare-se para experienciar um novo nível de imersão televisiva com a TV LG UHD AU7700.\"\r\n            },\r\n                      {\r\n                \"id\": \"648f0e3db817311ba39a73d8\",\r\n                \"name\": \"Smart TV 43 UHD 4K LG\",\r\n                \"color\": \"Preto\",\r\n                \"value\": 1499,\r\n                \"details\": \"Prepare-se para experienciar um novo nível de imersão televisiva com a TV LG UHD AU7700.\"\r\n            },\r\n                      {\r\n                \"id\": \"648f0e3db817311ba39a73d8\",\r\n                \"name\": \"Smart TV 43 UHD 4K LG\",\r\n                \"color\": \"Preto\",\r\n                \"value\": 1499,\r\n                \"details\": \"Prepare-se para experienciar um novo nível de imersão televisiva com a TV LG UHD AU7700.\"\r\n            },\r\n                      {\r\n                \"id\": \"648f0e3db817311ba39a73d8\",\r\n                \"name\": \"Smart TV 43 UHD 4K LG\",\r\n                \"color\": \"Preto\",\r\n                \"value\": 1499,\r\n                \"details\": \"Prepare-se para experienciar um novo nível de imersão televisiva com a TV LG UHD AU7700.\"\r\n            },\r\n                      {\r\n                \"id\": \"648f0e3db817311ba39a73d8\",\r\n                \"name\": \"Smart TV 43 UHD 4K LG\",\r\n                \"color\": \"Preto\",\r\n                \"value\": 1499,\r\n                \"details\": \"Prepare-se para experienciar um novo nível de imersão televisiva com a TV LG UHD AU7700.\"\r\n            },\r\n                      {\r\n                \"id\": \"648f0e3db817311ba39a73d8\",\r\n                \"name\": \"Smart TV 43 UHD 4K LG\",\r\n                \"color\": \"Preto\",\r\n                \"value\": 1499,\r\n                \"details\": \"Prepare-se para experienciar um novo nível de imersão televisiva com a TV LG UHD AU7700.\"\r\n            },\r\n                      {\r\n                \"id\": \"648f0e3db817311ba39a73d8\",\r\n                \"name\": \"Smart TV 43 UHD 4K LG\",\r\n                \"color\": \"Preto\",\r\n                \"value\": 1499,\r\n                \"details\": \"Prepare-se para experienciar um novo nível de imersão televisiva com a TV LG UHD AU7700.\"\r\n            },\r\n                      {\r\n                \"id\": \"648f0e3db817311ba39a73d8\",\r\n                \"name\": \"Smart TV 43 UHD 4K LG\",\r\n                \"color\": \"Preto\",\r\n                \"value\": 1499,\r\n                \"details\": \"Prepare-se para experienciar um novo nível de imersão televisiva com a TV LG UHD AU7700.\"\r\n            },\r\n                      {\r\n                \"id\": \"648f0e3db817311ba39a73d8\",\r\n                \"name\": \"Smart TV 43 UHD 4K LG\",\r\n                \"color\": \"Preto\",\r\n                \"value\": 1499,\r\n                \"details\": \"Prepare-se para experienciar um novo nível de imersão televisiva com a TV LG UHD AU7700.\"\r\n            },\r\n                      {\r\n                \"id\": \"648f0e3db817311ba39a73d8\",\r\n                \"name\": \"Smart TV 43 UHD 4K LG\",\r\n                \"color\": \"Preto\",\r\n                \"value\": 1499,\r\n                \"details\": \"Prepare-se para experienciar um novo nível de imersão televisiva com a TV LG UHD AU7700.\"\r\n            },\r\n                      {\r\n                \"id\": \"648f0e3db817311ba39a73d8\",\r\n                \"name\": \"Smart TV 43 UHD 4K LG\",\r\n                \"color\": \"Preto\",\r\n                \"value\": 1499,\r\n                \"details\": \"Prepare-se para experienciar um novo nível de imersão televisiva com a TV LG UHD AU7700.\"\r\n            },\r\n                      {\r\n                \"id\": \"648f0e3db817311ba39a73d8\",\r\n                \"name\": \"Smart TV 43 UHD 4K LG\",\r\n                \"color\": \"Preto\",\r\n                \"value\": 1499,\r\n                \"details\": \"Prepare-se para experienciar um novo nível de imersão televisiva com a TV LG UHD AU7700.\"\r\n            },\r\n                      {\r\n                \"id\": \"648f0e3db817311ba39a73d8\",\r\n                \"name\": \"Smart TV 43 UHD 4K LG\",\r\n                \"color\": \"Preto\",\r\n                \"value\": 1499,\r\n                \"details\": \"Prepare-se para experienciar um novo nível de imersão televisiva com a TV LG UHD AU7700.\"\r\n            },\r\n                      {\r\n                \"id\": \"648f0e3db817311ba39a73d8\",\r\n                \"name\": \"Smart TV 43 UHD 4K LG\",\r\n                \"color\": \"Preto\",\r\n                \"value\": 1499,\r\n                \"details\": \"Prepare-se para experienciar um novo nível de imersão televisiva com a TV LG UHD AU7700.\"\r\n            },\r\n                      {\r\n                \"id\": \"648f0e3db817311ba39a73d8\",\r\n                \"name\": \"Smart TV 43 UHD 4K LG\",\r\n                \"color\": \"Preto\",\r\n                \"value\": 1499,\r\n                \"details\": \"Prepare-se para experienciar um novo nível de imersão televisiva com a TV LG UHD AU7700.\"\r\n            }\r\n        ],\r\n        \"client\": {\r\n            \"id\": \"648f0e08b817311ba39a73d6\",\r\n            \"name\": \"Joaozinho da Silva Souza\",\r\n            \"cpf\": \"927.907.020-81\",\r\n            \"address\": \"Rua da Wishlist\"\r\n        }\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/wishlists",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"wishlists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - findByProductsAndClient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ0MVhmOVdJUlJrWGU0M19MVGVjV29XRjlIY2hKdjNLWGFtajBiemJGYl9BIn0.eyJleHAiOjE2ODcxMjUxNTEsImlhdCI6MTY4NzA4OTE1MSwianRpIjoiZjI0YzcxNDktZGE5OS00OWMxLTljMjAtNDVjMmRjNTg1Y2ZkIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5OTkwL3JlYWxtcy93aXNobGlzdCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiIxNTRjMzEzOS1jMTMxLTQ3ODctOGM3Yy0xMWNhNzEwMTcxYjAiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ3aXNobGlzdCIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXdpc2hsaXN0IiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJ3aXNobGlzdCI6eyJyb2xlcyI6WyJ1bWFfcHJvdGVjdGlvbiJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJjbGllbnRIb3N0IjoiMTcyLjE3LjAuMSIsImNsaWVudElkIjoid2lzaGxpc3QiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtd2lzaGxpc3QiLCJjbGllbnRBZGRyZXNzIjoiMTcyLjE3LjAuMSJ9.gb4salNWi2XUfM6Xifza6kTa9QpNZtHEQxzCRM66zMvxOAH9rYoTWnwMXeO8eec7TxwiiEiKsmKhTNprhW9Z5lXuqTNYS03WBhmHcXD2nKWbHOZe93yzn3wHHH2pxW42mHgMJLFDy5AhGSCdb9SwJN5IZeelu_6oUgYKOOLv3W1SI4teOVr7bRoSnrQcWQSNDEibuMEUGu7omSVXcdpqrZ_l8Dye1u59kIVjtdRlgrWbRj-r9YzUoFZovXJDzrYVsaI0g8afriJ4KhU7jS1in__kOHbUnyq9zxAaXL2hU0gpMmUNYcbzkQGnNUcguSW8BQ9O2HIiCuKOqexfT7V6zA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/wishlists/products?idProduct=648f0e3db817311ba39a73d8&idClient=648f0e08b817311ba39a73d6",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"wishlists",
+								"products"
+							],
+							"query": [
+								{
+									"key": "idProduct",
+									"value": "648f0e3db817311ba39a73d8"
+								},
+								{
+									"key": "idClient",
+									"value": "648f0e08b817311ba39a73d6"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
