@@ -27,12 +27,12 @@ public class WishlistService {
     }
 
     public Wishlist creatingWishlist(Wishlist wishlist) {
-        if(checkingEqualWishlist(wishlist)) {
-            logger.info("The wishlist is equals.");
-            return wishlistRepository.findByName(wishlist.getName());
-        }
-
         try {
+            if(checkingEqualWishlist(wishlist)) {
+                logger.info("The wishlist is equals.");
+                return wishlistRepository.findByName(wishlist.getName());
+            }
+
             wishlist = wishlistRepository.save(wishlist);
         } catch (Exception ex) {
             logger.error(ex.getMessage());
@@ -43,9 +43,9 @@ public class WishlistService {
     }
 
     public Wishlist updatingWishlist(Wishlist wishlist) {
-        verifyIfIdIsValid(wishlist.getId());
-
         try {
+            verifyIfIdIsValid(wishlist.getId());
+
             wishlist = wishlistRepository.save(wishlist);
         } catch (Exception ex) {
             logger.error(ex.getMessage());

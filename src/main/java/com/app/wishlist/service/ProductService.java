@@ -27,27 +27,29 @@ public class ProductService {
     }
 
     public Product creatingProduct(Product product) {
-        if(checkingEqualProduct(product)) {
-            logger.info("The product is equals.");
-            return productRepository.findByName(product.getName());
-        }
-
         try {
+            if(checkingEqualProduct(product)) {
+                logger.info("The product is equals.");
+                return productRepository.findByName(product.getName());
+            }
+
             product = productRepository.save(product);
         } catch (Exception ex) {
             logger.error(ex.getMessage());
+            throw new RuntimeException(ex.getMessage());
         }
 
         return product;
     }
 
     public Product updatingProduct(Product product) {
-        verifyIfIdIsValid(product.getId());
-
         try {
+            verifyIfIdIsValid(product.getId());
+
             product = productRepository.save(product);
         } catch (Exception ex) {
             logger.error(ex.getMessage());
+            throw new RuntimeException(ex.getMessage());
         }
 
         return product;

@@ -27,29 +27,29 @@ public class ClientService {
     }
 
     public Client creatingClient(Client client) {
-        if(checkingEqualClient(client)) {
-            logger.info("The clint is equals.");
-            return clientRepository.findByCpf(client.getCpf());
-        }
-
         try {
+            if(checkingEqualClient(client)) {
+                logger.info("The clint is equals.");
+                return clientRepository.findByCpf(client.getCpf());
+            }
+
             client = clientRepository.save(client);
         } catch (Exception ex) {
             logger.error(ex.getMessage());
+            throw new RuntimeException(ex.getMessage());
         }
-
         return client;
     }
 
     public Client updatingClient(Client client) {
-        verifyIfIdIsValid(client.getId());
-
         try {
+            verifyIfIdIsValid(client.getId());
+
             client = clientRepository.save(client);
         } catch (Exception ex) {
             logger.error(ex.getMessage());
+            throw new RuntimeException(ex.getMessage());
         }
-
         return client;
     }
 
@@ -64,7 +64,6 @@ public class ClientService {
         if(clientForChecking == null) {
             return false;
         }
-
         return client.getCpf().equals(clientForChecking.getCpf());
     }
 
