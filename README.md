@@ -49,3 +49,12 @@
         - Para isso vá em wishlist/findByProductsAndClient e passe o id do cliente e do produto no parms que ele irá buscar uma Wishlist que tem o produto e o clinte informado, conforme o print:
         - ![print6](https://github.com/thiagoslovak/wishlist/blob/master/prints/Screenshot_6.png)
 
+    ### Algumas Observações
+   - Wishlist:
+     - Não é possível criar duas Wishlist com mesmo nome.
+     - As Wishlist também tem um index unico para o Cliente então cada Cliente tem apenas uma Wishlist.
+     - A Wishlist tem um limite de 20 produtos.
+   - Cliente:
+     - Não é permitido criar dois Cliente com o mesmo CPF.
+   - Produtos:
+     - Não é permitido criar dois Produtos com o mesmo nome.   
