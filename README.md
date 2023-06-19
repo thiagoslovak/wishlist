@@ -42,7 +42,7 @@
             - ![print](https://github.com/thiagoslovak/wishlist/blob/master/prints/Screenshot_5.png)
 
     - Remover um produto da Wishlist do cliente:
-        - Para remover um produto vá em wishlist/PUT - updating e passar a Wishlist, com o produtos que deseja que fique e com o cliente.
+        - Para remover um produto vá em wishlist/PUT - updating e passar a Wishlist, com os produtos que deseja que fique e com o cliente.
     - Consultar todos os produtos da Wishlist do cliente:
         - Temos os wishlist/findingById e wishlist/findingAllWishlist
     - Consultar se um determinado produto está na Wishlist do cliente:
